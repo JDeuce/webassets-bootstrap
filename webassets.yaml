@@ -13,9 +13,9 @@ bundles:
             # We want output mode, which concatenates all the
             # files we specify before running scss
             SASS_AS_OUTPUT: True
+            # Since we feed it a concatenated file, we need to
+            # manually specify the path for bootstraps imports
             SASS_LOAD_PATHS:
-                # Since we feed it a concatenated file, we need to
-                # manually specify the path for bootstraps imports
                 - vendor/bootstrap-sass/assets/stylesheets
         contents:
             # Note for sass, variables must be defined first
@@ -33,9 +33,9 @@ bundles:
             # We want output mode, which concatenates all the
             # files we specify before running less
             LESS_AS_OUTPUT: True
+            # Since we feed it a concatenated file, we need to
+            # manually specify the path for bootstraps imports
             LESS_PATHS:
-                # Since we feed it a concatenated file, we need to
-                # manually specify the path for bootstraps imports
                 - vendor/bootstrap-less/less
         contents:
             # Note for Less, variables must be defined at the end
