@@ -1,0 +1,43 @@
+# Files wlil be referenced relative to the directory
+# webassets is run from
+directory: .
+
+bundles:
+
+    # The sass bundle
+    # This one uses the sass gem from python
+    sass:
+        output: dist/sass.css
+        filters: scss,cssutils
+        config:
+            # We want output mode, which concatenates all the
+            # files we specify before running scss
+            SASS_AS_OUTPUT: True
+            SASS_LOAD_PATHS:
+                # Since we feed it a concatenated file, we need to
+                # manually specify the path for bootstraps imports
+                - vendor/bootstrap-sass/assets/stylesheets
+        contents:
+            # Note for sass, variables must be defined first
+            # and then bootstrap sets them all using !default to make sure ours
+            # are kept.
+            - src/sass_overrides.scss
+            - vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss
+
+    less:
+        output: dist/less.css
+        filters: less,cssutils
+        config:
+            # We want output mode, which concatenates all the
+            # files we specify before running less
+            LESS_AS_OUTPUT: True
+            LESS_PATHS:
+                # Since we feed it a concatenated file, we need to
+                # manually specify the path for bootstraps imports
+                - vendor/bootstrap-less/less
+        contents:
+            # Note for Less, variables must be defined at the end
+            # since there is no similar !default mechanism, but the values get
+            # hoisted and end up working anyway due to the way less works
+            - vendor/bootstrap-less/less/bootstrap.less
+            - src/less_overrides.less
