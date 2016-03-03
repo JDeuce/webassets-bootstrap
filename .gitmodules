@@ -1,0 +1,7 @@
+[submodule "vendor/bootstrap-less"]
+	path = vendor/bootstrap-less
+	url = https://github.com/twbs/bootstrap
+
+[submodule "vendor/bootstrap-sass"]
+	path = vendor/bootstrap-sass
+	url = https://github.com/twbs/bootstrap-sass
