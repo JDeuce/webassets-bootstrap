@@ -52,6 +52,20 @@ Note that this repo uses submodules.
 
     apt-get install python-webassets
 
+## cssutils
+
+cssutils is used to squeeze a few extra bytes
+by minifying the CSS further than Less does by
+default or Sass does with "compressed" mode
+
+### pip
+
+    pip install cssutils
+
+### ubuntu
+
+    apt-get install python-cssutils
+
 # Running it
 
 A makefile is included for simple operation,
