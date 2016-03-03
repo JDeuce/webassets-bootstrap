@@ -5,7 +5,7 @@ directory: .
 bundles:
 
     # The sass bundle
-    # This one uses the sass gem from python
+    # This one uses the sass gem from ruby
     sass:
         output: dist/sass.css
         filters: scss,cssutils
@@ -24,6 +24,8 @@ bundles:
             - src/sass_overrides.scss
             - vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss
 
+    # The less bundle
+    # This one uses the less package from npm/node
     less:
         output: dist/less.css
         filters: less,cssutils
